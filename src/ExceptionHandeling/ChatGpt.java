@@ -1,5 +1,7 @@
 package ExceptionHandeling;
 
+import java.util.Objects;
+
 public class ChatGpt {
 private int age;
 private String name;
@@ -28,20 +30,26 @@ private int ssn;
     public void setSsn(int ssn) {
         this.ssn = ssn;
     }
-
-    public int getSsn() {
-        return ssn;
+    @Override
+    public int hashCode(){
+     return Objects.hash(gender, name, age, ssn);
+    }
+    @Override
+    public boolean equals(Object o){
+        if(this == o){
+            return true;
+        }
+        if(o == null){
+            return false;
+        }
+        if (getClass() != o.getClass()){
+            return  false;
+        }
+        ChatGpt chatGpt = (ChatGpt) o;
+         return age == chatGpt.age &&
+                ssn == chatGpt.ssn &&
+                gender == chatGpt.gender &&
+                Objects.equals(name, chatGpt.name);
     }
 
-    public char getGender() {
-        return gender;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
 }
