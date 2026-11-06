@@ -8,6 +8,9 @@ public class HascodeEqualDemo {
         System.out.println(gpt1.hashCode());
         System.out.println(gpt.hashCode());
         System.out.println(gpt.equals(gpt1));
+        System.out.println(gpt);
+
+        System.out.println(gpt1);
     }
 }
 

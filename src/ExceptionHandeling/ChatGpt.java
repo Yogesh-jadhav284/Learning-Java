@@ -52,4 +52,12 @@ private int ssn;
                 Objects.equals(name, chatGpt.name);
     }
 
+    @Override
+    public String toString() {
+        return "ChatGpt{" +
+                "age=" + age + "," +
+                " name='" + name + '\'' +
+                ",  ssn=" + ssn +
+                '}';
+    }
 }
